@@ -4,17 +4,16 @@ class Program
 {
     static void Main(string[] args)
     {
-
         Console.WriteLine("Welcome to your Journal!");
 
         PromptGenerator promptGenerator = new PromptGenerator();
         Entry entry = new Entry();
         Journal journal = new Journal();
+        Rating rating = new Rating();
 
         while (true)
         {
-
-            Console.WriteLine("Please select one of the following choices:");
+            Console.WriteLine("Please select one of you following choices:");
             Console.WriteLine("1. Write");
             Console.WriteLine("2. Display");
             Console.WriteLine("3. Load");
@@ -64,8 +63,7 @@ class Program
             else if (userInput == "5")
             {
                 Console.WriteLine();
-                Console.WriteLine("Have a good day!");
-                Console.WriteLine();
+                rating.DisplayRate();
                 break;
             }
             else
@@ -75,6 +73,5 @@ class Program
                 Console.WriteLine();
             }
         }
-        
     }
 }

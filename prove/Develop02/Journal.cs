@@ -1,9 +1,8 @@
-﻿using System;
+using System;
 using System.IO;
 
 public class Journal
 {
-
     public List<Entry> _entries = new List<Entry>();
     public void DisplayAll()
     {
@@ -35,16 +34,6 @@ public class Journal
     {
         if (File.Exists(filename))
         {
-            /*using (StreamReader streamReader = File.OpenText(filename))
-            {
-                string textFound;
-
-                while ((textFound = streamReader.ReadLine()) != null)
-                {
-                    Console.WriteLine(textFound);
-                }
-            }*/
-
             string[] lines = System.IO.File.ReadAllLines(filename);
 
             foreach (string line in lines)
@@ -56,8 +45,7 @@ public class Journal
         }
         else
         {
-            Console.WriteLine();
-            Console.WriteLine("File not found. Please try again.");
+            Console.WriteLine("\nFile does not exist.");
         }
     }
 
