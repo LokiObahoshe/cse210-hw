@@ -6,8 +6,11 @@ public class Rating
 
     public void DisplayRate()
     {
+
+        //public string _rate;
+
         Console.WriteLine("How would you rate your day?: (1-10)");
-        string rate = Console.ReadLine();
+        string _rate = Console.ReadLine();
 
         Console.WriteLine("\nWould you like to add this rating to one of your saved journals?");
         string userAnswer = Console.ReadLine();
@@ -21,7 +24,7 @@ public class Rating
 
                 if (File.Exists(filename))
                 {
-                    System.IO.File.AppendAllText(filename, $"Rating of the day: {rate}\n");
+                    System.IO.File.AppendAllText(filename, $"Rating of the day - {_rate}\n");
                     //https://learn.microsoft.com/en-us/dotnet/api/system.io.file.appendalltext?view=net-8.0
                     //https://stackoverflow.com/questions/51729337/why-is-system-io-file-appendalltext-locking-my-file
 

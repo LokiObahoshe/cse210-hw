@@ -35,12 +35,30 @@ public class Journal
         if (File.Exists(filename))
         {
             string[] lines = System.IO.File.ReadAllLines(filename);
+            //string[] lines = File.ReadAllLines(filename);
 
             foreach (string line in lines)
             {
                 string[] parts = line.Split(",");
                 Console.WriteLine();
                 Console.WriteLine(parts[0]);
+
+                /*
+                if (parts.Length == 3) // Check if the line has 3 parts
+                {
+                    Entry entry = new Entry
+                    {
+                        _date = parts[0].Trim(),
+                        _promptText = parts[1].Trim(),
+                        _entryText = parts[2].Trim()
+                    };
+                    _entries.Add(entry); // Add the entry to the journal
+                }
+                else
+                {
+                    Console.WriteLine($"An error occured");
+                }
+                */
             }
         }
         else
