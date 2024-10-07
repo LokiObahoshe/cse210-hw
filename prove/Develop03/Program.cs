@@ -1,6 +1,6 @@
 using System;
 
-//Exceeding Requirements: Added a "suggestion" class to give the user a new scripture quote to study after completing or quiting the application.
+//Exceeding Requirements: Added a "suggestion" class to give the user a new scripture quote to study after completing or quitting the application.
 
 class Program
 {
