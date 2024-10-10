@@ -11,8 +11,13 @@ class Comment {
         _text = text;
     }
 
-    public string GetDisplayText()
+    public string GetComment()
     {
-        Console.Writeline("AHHHH");
+        Console.WriteLine("AHHHH");
+    }
+
+    public string GetName()
+    {
+        Console.WriteLine();
     }
 }

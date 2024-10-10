@@ -14,13 +14,18 @@ class Video {
         _length = length;
     }
 
-    public int NumberOfComments()
+    public void AddComment(string _name, string _text)
     {
-        Console.Writeline("W.I.P")
+        Console.WriteLine();
+    }
+
+    public void NumberOfComments()
+    {
+        Console.WriteLine("W.I.P")
     }
 
     public string GetDisplayText()
     {
-        Console.Writeline("WOOOOOO");
+        Console.WriteLine("WOOOOOO");
     }
 }
