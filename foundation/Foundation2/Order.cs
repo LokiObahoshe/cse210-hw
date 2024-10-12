@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 class Order {
 
@@ -7,7 +8,7 @@ class Order {
 
     public Order(Customer customer)
     {
-        _customer = customer;
+        this._customer = customer;
     }
 
     public double TotalPrice()
@@ -18,21 +19,43 @@ class Order {
         shipping cost.
         */
 
-        Console.WriteLine();
+        double totalPrice = 0;
+
+        foreach (var product in _products)
+        {
+            totalPrice += product.TotalCost();
+        }
+
+        if (_customer.IsInUsa())
+        {
+            totalPrice += 5;
+        }
+        else
+        {
+            totalPrice += 35;
+        }
+        return totalPrice;
     }
 
-    public void AddProduct()
+    public void AddProduct(Product product)
     {
-        Console.WriteLine();
+        _products.Add(product);
     }
 
     public string GetPackingLabel()
     {
-        Console.WriteLine();
+        string label ="";
+
+        foreach (var product in _products)
+        {
+            label += $" || Product: {product.GetName()}, ID: {product.GetProductId()}";
+        }
+
+        return label;
     }
 
     public string GetShippingLabel()
     {
-        Console.WriteLine();
+        return $" || Customer: {_customer.GetName()} || {_customer}";
     }
 }

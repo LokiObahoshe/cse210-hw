@@ -11,18 +11,18 @@ class Customer {
         _address = address;
     }
 
-    public string Address()
+    public bool IsInUsa()
     {
-        //Call to address
+        return _address.IsInUsa();
     }
 
-    public string GetDisplayText()
+    public override string ToString()
     {
-        Console.WriteLine();
+        return $"Address: {_address}";
     }
 
     public string GetName()
     {
-        Console.WriteLine();
+        return _name;
     }
 }

@@ -24,16 +24,16 @@ class Product {
         the product total cost would be $15.)
         */
 
-        Console.WriteLine();
+        return _price * _quantity;
     }
 
     public string GetName()
     {
-        Console.WriteLine();
+        return _name;
     }
 
-    public string GetProductId()
+    public int GetProductId()
     {
-        Console.WriteLine();
+        return _productId;
     }
 }

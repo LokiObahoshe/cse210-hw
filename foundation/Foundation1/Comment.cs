@@ -13,11 +13,11 @@ class Comment {
 
     public string GetComment()
     {
-        Console.WriteLine("AHHHH");
+        return _text;
     }
 
     public string GetName()
     {
-        Console.WriteLine();
+        return _name;
     }
 }

@@ -2,30 +2,30 @@ using System;
 
 class Address {
 
-    private string _Address;
+    private string _address;
     private string _city;
     private string _state;
     private string _country;
 
-    public Address(string Address, string city, string state, string country)
+    public Address(string address, string city, string state, string country)
     {
-        _Address = Address;
+        _address = address;
         _city = city;
         _state = state;
         _country = country;
     }
 
-    public bool IfInUsa()
+    public bool IsInUsa()
     {
         /*
         The address should have a method that can return
         whether it is in the USA or not.
         */
 
-        Console.WriteLine();
+        return _country.ToUpper() == "USA";
     }
 
-    public string GetDisplayText()
+    public override string ToString()
     {
         /*
         The address should have a method to return a string
@@ -33,7 +33,7 @@ class Address {
         (with newline characters where appropriate)
         */
 
-        Console.WriteLine();
+        return $"{_address}, {_city}, {_state} {_country}";
     }
 
 }

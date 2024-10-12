@@ -16,16 +16,32 @@ class Video {
 
     public void AddComment(string _name, string _text)
     {
-        Console.WriteLine();
+        Comment comment = new Comment(_name, _text);
+        _comments.Add(comment);
     }
 
-    public void NumberOfComments()
+    public int NumberOfComments()
     {
-        Console.WriteLine("W.I.P")
+        return _comments.Count;
     }
 
     public string GetDisplayText()
     {
-        Console.WriteLine("WOOOOOO");
+        string result = $"\n------------------\n\nTitle: {_title}\nAuthor: {_author}\nLength: {_length} seconds\nNumber of Comments: {NumberOfComments()}";
+
+        if (NumberOfComments() > 0)
+        {
+            result += "\n\nComments:\n";
+            foreach (var comment in _comments)
+            {
+                result += $"\n{comment.GetName()}: {comment.GetComment()}";
+            }
+        }
+        return result;
+    }
+
+    public override string ToString()
+    {
+        return GetDisplayText();
     }
 }
