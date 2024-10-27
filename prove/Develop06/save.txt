@@ -1,0 +1,5 @@
+490
+SimpleGoal,Simple Goal,It's simple,100,True
+EternalGoal,Eternal Goal,It's eternal,50,False
+ChecklistGoal,Checklist Goal,It's a checklist,80,3,150,3,True
+NegativeGoal,Negative Goal,It's negative,50,False

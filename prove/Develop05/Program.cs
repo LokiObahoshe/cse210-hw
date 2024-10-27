@@ -1,6 +1,6 @@
 using System;
 
-//Exceeding Requirements: Added a whole new class called "MemorizingActivity" that makes the user memorize a list of randomized vocabulary words.
+// Still trying to understand how to make these work (a majority of code may be remade)
 
 class Program
 {
