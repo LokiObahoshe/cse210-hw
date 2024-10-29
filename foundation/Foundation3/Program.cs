@@ -4,6 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        Console.Clear();
         RunningActivity runningActivity = new RunningActivity("23 May 2015", 80, 10);
         CyclingActivity cyclingActivity = new CyclingActivity("03 Jul 2015", 60, 5.5);
         SwimmingActivity swimmingActivity = new SwimmingActivity("14 Aug 2015", 150, 13);
